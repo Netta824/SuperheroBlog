@@ -1,0 +1,89 @@
+body {
+	text-align: center;
+	font-family: 'Shadows Into Light Two', cursive;
+	background-color: #ce96ce;
+  font-size: 20px;
+}
+
+tr, td {
+	border: 3px solid #9242f4;
+	background-color: #96cece;
+}
+
+td {
+	position: relative;
+}
+
+table.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+th {
+	border: 5px solid #9242f4;
+	font-size: 25px;
+	font-family: 'Walter Turncoat', cursive;
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+input[type=button], input[type=submit], input[type=reset]{
+    background-color: #9242f4;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type=file] {
+	display: none;
+}
+
+span.created_at, span.updated_at {
+    position: absolute;
+    right: 5px;
+    border: 1px solid magenta;
+    font-size: 13px;
+}
+
+span.created_at {
+	top: 3px
+}
+
+span.updated_at {
+	top: 25px
+}
+
+.file_button {
+    background-color: #9242f4;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    border-image-width: 100px;
+}
+
+img:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 10px;
+  height: 400px;
+  width: 500px;
+}
+
+img {
+  object-fit: cover;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blog</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="/static/js/jquery.editable.js"></script>
+		<script src="/static/js/moment.js"></script>
+		<script src="/static/js/moment-timezone.js"></script>
+		<script src="/static/js/main.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
+
+
+		<form id="blog">
+			<input type="submit">
+			<input type="text" id="Post">
+		</form>
+
+		
+	</head>
+	<body>
+
+		
+		<table id="posts" class="center" width=500px>
+			<tr height=50px>
+			<th><i>Write whatever comes to mind, and add a picture or GIF</i></th>
+			</tr>
+			{% for dict in blog %}
+			<tr id={{dict.id}} class="entry" height=150px>
+				
+				<td>
+				{% if dict.image_url != None %}
+					<img id="myImg{{dict.id}}" src="{{dict.image_url}}" alt="Your Image Here" align="bottom" width=500px height=400px/>
+				{% else %}
+					<img id="myImg{{dict.id}}" src="uploads/background.jpg" alt="Your Image Here" align="bottom" width=500px height=400px/>
+				{% endif %}
+
+					<span class ="editable">{{dict["text"]}}</span>
+					<span class="created_at">Created At: {{dict["created_at"]}}</span>
+					<span class="updated_at">Updated At: {{dict["updated_at"]}}</span>
+					<input type="button" value="delete" class="delete2"/>
+					<input type="button" value="edit" class="edit2"/>
+					<label class="file_button">
+					<input type='file'/>chooseFile
+					</label>
+					
+ 				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
+
+
+
+
+
